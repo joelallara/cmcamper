@@ -8429,6 +8429,10 @@ h1, h2, h3, h4, h5,
     -ms-transform: scale(1.2);
     transform: scale(1.2); }
 
+.ftco-project {
+  padding: 0 3em;
+}
+
 .ftco-project .owl-carousel {
   margin: 0; }
 
