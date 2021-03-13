@@ -1,0 +1,34 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 06/10/2018 08:32
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.25998b1d3a66.eot");
+  src: url("./Flaticon.25998b1d3a66.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.80876dba9923.woff") format("woff"),
+       url("./Flaticon.b9bb1ed45788.ttf") format("truetype"),
+       url("./Flaticon.0b6020064f87.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.0b6020064f87.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}
+
+.flaticon-layers:before { content: "\f100"; }
+.flaticon-compass-symbol:before { content: "\f101"; }
+.flaticon-idea:before { content: "\f102"; }
