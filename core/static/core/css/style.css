@@ -9530,6 +9530,11 @@ textarea.form-control {
   animation: loader-dash 1.5s ease-in-out infinite;
   stroke-linecap: round; }
 
+.casarodante{
+  background-image: url('../images/caravan-solid.svg');
+  
+}
+
 @-webkit-keyframes loader-rotate {
   100% {
     -webkit-transform: rotate(360deg);
