@@ -1,0 +1,19 @@
+.tarjeta {
+    padding: 20px 20px;
+    margin-bottom: 0;
+}
+
+.bg-oliva {
+  /* border: none; */
+  background: rgb(242,203,5);
+  background: linear-gradient(90deg, rgba(242,203,5,1) 0%, rgba(140,131,3,1) 20%, rgba(115,107,2,1) 50%, rgba(64,60,2,1) 80%, rgba(38,32,1,1) 100%);
+}
+
+.bg-services {
+  background: rgb(60,106,46);
+  background: linear-gradient(0deg, rgba(60,106,46,1) 22%, rgba(18,64,147,1) 100%);
+}
+
+.requerimientos {
+  margin-bottom: 0;
+}

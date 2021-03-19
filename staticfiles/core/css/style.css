@@ -94,7 +94,8 @@ ol,
 ul,
 dl {
   margin-top: 0;
-  margin-bottom: 1rem; }
+  /* margin-bottom: 1rem;  */
+}
 
 ol ol,
 ul ul,
@@ -8031,6 +8032,8 @@ h1, h2, h3, h4, h5,
 
 .ftco-navbar-light {
   background: transparent !important;
+  /* background-color: rgba(100, 100, 138, 0.3);
+  opacity: 0.7; */
   position: absolute;
   top: 0;
   left: 0;
@@ -8108,7 +8111,8 @@ h1, h2, h3, h4, h5,
   .ftco-navbar-light .navbar-nav > .nav-item.active .nav-link {
     background: transparent;
     background: none;
-    color: #2e9e5b; }
+    color: #fff;
+  }
   @media (max-width: 991.98px) {
     .ftco-navbar-light .navbar-nav > .nav-item.active > a {
       color: #2e9e5b; } }
@@ -8179,6 +8183,7 @@ h1, h2, h3, h4, h5,
       .ftco-navbar-light.scrolled .nav-link.active {
         color: #2e9e5b !important; }
     .ftco-navbar-light.scrolled.awake {
+      opacity: 1;
       margin-top: 0px;
       -webkit-transition: .3s all ease-out;
       -o-transition: .3s all ease-out;
@@ -9529,14 +9534,6 @@ textarea.form-control {
   -webkit-animation: loader-dash 1.5s ease-in-out infinite;
   animation: loader-dash 1.5s ease-in-out infinite;
   stroke-linecap: round; }
-
-.icon-casarodante {
-    background: url('../images/casa-rodante.png');
-    height: 20px;
-    width: 20px;
-    display: block;
-    /* Other styles here */
-}
 
 @-webkit-keyframes loader-rotate {
   100% {
