@@ -3,6 +3,14 @@
  	easing: 'slide'
  });
 
+ $('.owl-carousel').owlCarousel({
+    margin:10,
+	autoplay:true,
+	dots: true
+});
+
+
+
 (function($) {
 
 	"use strict";
