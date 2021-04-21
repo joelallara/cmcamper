@@ -1,0 +1,46 @@
+{% extends 'core/base.html' %}
+{% load static%}
+
+{% block titulo %}
+Fabricación de casilla rodante modelo OFF ROAD
+{% endblock titulo %}
+
+{% block fabricaciones %}
+	<section class="ftco-section ftco-services ftco-no-pt bg-services">
+		<div class="container">
+			<div class="row services-section">
+				<div class="container-fluid px-md-5">
+					<div class="row">
+						<div class="col-md-12 testimonial">
+							<div class="carousel-project owl-carousel">
+								<div class="item">
+									<div class="project">
+										<div class="img">
+											<img src="{% static 'core/images/project-8.jpg' %}" class="img-fluid"
+												alt="Colorlib Template">
+											<a href="{% static 'core/images/project-8.jpg' %}"
+												class="icon image-popup d-flex justify-content-center align-items-center">
+												<span class="icon-expand"></span>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="project">
+										<div class="img">
+											<img src="{% static 'core/images/project-15.jpg' %}" class="img-fluid"
+												alt="Colorlib Template">
+											<a href="{% static 'core/images/project-15.jpg' %}"
+												class="icon image-popup d-flex justify-content-center align-items-center">
+												<span class="icon-expand"></span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</section>
+	{% endblock fabricaciones %}

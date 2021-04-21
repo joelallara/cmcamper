@@ -7,3 +7,9 @@ class HomePageView(TemplateView):
 
 class ProductPageView(TemplateView):
     template_name = "core/products.html"
+
+class OffRoadPageView(TemplateView):
+    template_name = "core/off-road.html"
+
+class MotorHomePageView(TemplateView):
+    template_name = "core/motorhome.html"
