@@ -1,57 +1,97 @@
-{% extends 'core/base.html' %}
 {% load static%}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block titulo %}
-Viajar añade toques distintos a tu vida y llena de aventuras tus sueños
-{% endblock titulo %}
+<head>
+	<title>CM Camper</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	{% block fabricaciones %}
-	<section class="ftco-section ftco-services ftco-no-pt bg-services">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="{% static 'core/css/open-iconic-bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'core/css/animate.css' %}">
+
+	<link rel="stylesheet" href="{% static 'core/css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'core/css//owl.theme.default.min.css' %}">
+	<link rel="stylesheet" href="{% static 'core/css/magnific-popup.css' %}">
+
+	<link rel="stylesheet" href="{% static 'core/css/aos.css' %}">
+
+	<link rel="stylesheet" href="{% static 'core/css/ionicons.min.css' %}">
+
+	<link rel="stylesheet" href="{% static 'core/css/flaticon.css' %}">
+	<link rel="stylesheet" href="{% static 'core/css/icomoon.css' %}">
+	<link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+	<!-- <link rel="stylesheet" href="{% static 'core/css/estilos-propios.css' %}"> -->
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<script src="https://kit.fontawesome.com/75b0cfc404.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
-			<div class="row services-section">
-				<div class="row services-section">
-					<div class="col-md-4 d-flex align-self-stretch ftco-animate">
-						<div class="block-6 services tarjeta text-center d-block ">
-							<a href="{% url 'productos' %}" target="_blank" class="block-20"
-								style="background-image: url('static/core/images/fondo-pop-up.jpg');">
-							</a>
-							<!-- <img width="60" height="81" src="{% static 'core/images/motorhome.svg' %}"> -->
-							<div class="media-body mt-3 float-right d-block">
-								<h3 class="heading">Fabricación y equipamiento de casa rodante</h3>
-								<p class="m-0"><a href="{% url 'productos' %}" target="_blank" class="btn btn-primary mt-2 mb-2">Más Info</a></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 d-flex align-self-stretch ftco-animate">
-						<div class="block-6 services tarjeta text-center d-block ">
-							<a href="{% url 'productos' %}" target="_blank" class="block-20"
-								style="background-image: url('static/core/images/fondo-pop-up.jpg');">
-							</a>
-							<!-- <img width="60" height="81" src="{% static 'core/images/motorhome.svg' %}"> -->
-							<div class="media-body mt-3 float-right d-block">
-								<h3 class="heading">Fabricación de camper doble cabina modelo POP UP</h3>
-								<p class="m-0"><a href="{% url 'productos' %}" target="_blank" class="btn btn-primary mt-2 mb-2">Más Info</a></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 d-flex align-self-stretch ftco-animate">
-						<div class="block-6 services tarjeta text-center d-block ">
-							<a href="single.html" target="_blank" class="block-20"
-								style="background-image: url('static/core/images/fondo-off-road.jpg');">
-							</a>
-							<!-- <img width="60" height="81" src="{% static 'core/images/motorhome.svg' %}"> -->
-							<div class="media-body mt-3 float-right d-block">
-								<h3 class="heading">Fabricación de casilla rodante modelo OFF ROAD</h3>
-								<p class="m-0"><a href="{% url 'productos' %}" target="_blank" class="btn btn-primary mt-2 mb-2">Más Info</a></p>
-							</div>
-						</div>
-					</div>
+			<a class="navbar-brand pt-2 pb-2" href="{% url 'inicio' %}">
+				<!-- <span>CM Camper</span> -->
+				<img src="{% static 'core/images/logo.svg' %}" alt="logo" width="200" alt=""
+					class="d-inline-block align-middle mr-2 h-100">
+			</a>
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="#" class="nav-link" data-nav-section="home"><span>Inicio</span></a>
+					</li>
+					<!-- <li class="nav-item"><a href="#" class="nav-link" data-nav-section="about"><span>About</span></a></li> -->
+					<li class="nav-item"><a href="#" class="nav-link"
+							data-nav-section="projects"><span>Productos</span></a></li>
+					<!-- <li class="nav-item"><a href="#" class="nav-link" data-nav-section="team"><span>Team</span></a></li>
+	          <li class="nav-item"><a href="#" class="nav-link" data-nav-section="testimony"><span>Testimony</span></a></li>
+	          <li class="nav-item"><a href="#" class="nav-link" data-nav-section="blog"><span>Blog</span></a></li> -->
+					<li class="nav-item"><a href="#" class="nav-link"
+							data-nav-section="contact"><span>Contacto</span></a></li>
+					<!-- <li class="nav-item cta"><a href="#" class="nav-link">Request a quote</a></li> -->
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<section class="hero-wrap js-fullheight" style="background-image: url('/static/core/images/bg_1.jpg');"
+		data-section="home">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start"
+				data-scrollax-parent="true">
+				<div class="col-md-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+					<!-- <p class="d-flex align-items-center"
+						data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+						<a href="https://vimeo.com/45830194"
+							class="icon-video popup-vimeo d-flex justify-content-center align-items-center mr-3">
+							<span class="ion-ios-play play mr-2"></span>
+							<span class="watch">Watch Video</span>
+						</a>
+					</p> -->
+					<h2 class="text-white text-center titulo" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+						{% block titulo %}
+						{% endblock titulo %}
+					</h2>
+					<!-- <p class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Travel to the any
+						corner of the world, without going around in circles</p> -->
 				</div>
 			</div>
+		</div>
 	</section>
+	{% block fabricaciones %}
 	{% endblock fabricaciones %}
 
-	<section class="ftco-section ftco-project bg-light ftco-no-pt pt-2" data-section="projects">
+	<section class="ftco-section ftco-project bg-light pt-3" data-section="projects">
 		<div class="container-fluid px-md-5">
 			<div class="row justify-content-center pb-5">
 				<div class="col-md-12 heading-section text-center ftco-animate">
@@ -92,7 +132,11 @@ Viajar añade toques distintos a tu vida y llena de aventuras tus sueños
 					</div>
 				</div>
 			</div>
-			<div class="row">
+
+
+
+
+			<!-- <div class="row">
 				<div class="col-md-12 testimonial">
 					<div class="carousel-project owl-carousel">
 						<div class="item">
@@ -193,7 +237,10 @@ Viajar añade toques distintos a tu vida y llena de aventuras tus sueños
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
+
+
+
 		</div>
 	</section>
 
@@ -201,7 +248,7 @@ Viajar añade toques distintos a tu vida y llena de aventuras tus sueños
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-3">
 				<div class="col-md-7 heading-section text-center ftco-animate">
-					<span class="subheading">Contacto</span>
+					<!-- <span class="subheading">Contacto</span> -->
 					<h2 class="mb-4">Contáctenos</h2>
 				</div>
 			</div>
