@@ -167,7 +167,8 @@ figure {
 
 img {
   vertical-align: middle;
-  border-style: none; }
+  border-style: none;
+ }
 
 svg {
   overflow: hidden;
@@ -389,6 +390,10 @@ mark,
 .img-fluid {
   max-width: 100%;
   height: auto; }
+
+  .img-fluid-main {
+    max-width: 600px;
+    height: auto; }
 
 .img-thumbnail {
   padding: 0.25rem;
@@ -9484,13 +9489,6 @@ textarea.form-control {
   margin-bottom: 8rem !important;
 }
 
-.owl-stage {
-  display: flex;
-}
-.owl-item {
-  display: flex;
-  flex: 1 0 auto;
-}
 
 #ftco-loader {
   position: fixed;
