@@ -177,7 +177,7 @@ AOS.init({
 		$('.carousel-project').owlCarousel({
 			autoplay: true,
 			center: false,
-			loop: false,
+			loop: true,
 			items: 1,
 			margin: 30,
 			stagePadding: 0,
@@ -199,7 +199,7 @@ AOS.init({
 		$('.carousel-pop').owlCarousel({
 			autoplay: true,
 			center: false,
-			loop: false,
+			loop: true,
 			items: 3,
 			margin: 30,
 			stagePadding: 0,
@@ -221,12 +221,11 @@ AOS.init({
 
 		$('.carousel-main').owlCarousel({
 			autoplay: true,
-			center: false,
-			loop: false,
-			items: 1,
-			margin: 60,
+			center: true,
+			loop: true,
+			items: 3,
+			margin: 30,
 			stagePadding: 0,
-			autoHeight: true,
 			nav: false,
 			dots: true,
 			navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
@@ -235,10 +234,10 @@ AOS.init({
 					items: 1
 				},
 				600: {
-					items: 1
+					items: 2
 				},
 				1000: {
-					items: 1
+					items: 3
 				}
 			}
 		});
