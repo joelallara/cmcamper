@@ -46,18 +46,13 @@
 
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav nav ml-auto">
-					<li class="nav-item"><a href="#" class="nav-link" data-nav-section="home"><span>Inicio</span></a>
+					<li class="nav-item"><a href="{% url 'inicio' %}" class="nav-link" data-nav-section="home">
+						<span>Inicio</span></a>
 					</li>
-					<!-- <li class="nav-item"><a href="#" class="nav-link" data-nav-section="about"><span>About</span></a></li> -->
 					<li class="nav-item"><a href="#" class="nav-link"
 							data-nav-section="projects"><span>Productos</span></a></li>
-					<!-- <li class="nav-item"><a href="#" class="nav-link" data-nav-section="team"><span>Team</span></a></li>
-	          <li class="nav-item"><a href="#" class="nav-link" data-nav-section="testimony"><span>Testimony</span></a></li>
-	          <li class="nav-item"><a href="#" class="nav-link" data-nav-section="blog"><span>Blog</span></a></li> -->
 					<li class="nav-item"><a href="#" class="nav-link"
 							data-nav-section="contact"><span>Contacto</span></a></li>
-					<!-- <li class="nav-item cta"><a href="#" class="nav-link">Request a quote</a></li> -->
-
 				</ul>
 			</div>
 		</div>
@@ -103,31 +98,17 @@
 						<div class="col-md-4 ftco-animate text-left">
 							<p>EQUIPAMIENTO SEGÚN REQUERIMIENTO</p>
 							<ul class="requerimientos">
-								<li>Anafe de 2 hornallas con corte de seguridad</li>
-								<li>Calefón de 7 lts electrónico</li>
-								<li>Heladera 220V de 90 Lts- Clase A++</li>
-								<li>Batería de ciclo profundo de 200AH</li>
-								<li>Inversor solar de 250W</li>
-								<li>Regulador solar</li>
-								<li>Panel solar de 160 watt Clase A</li>
-								<li>Sensor de perdida de gases</li>
-								<li>Claraboya con ventilador y extractor</li>
-								<li>Baño químico</li>
-								<li>Equipo de audio</li>
-								<li>Duchador de agua fría/cliente</li>
+								{% for equipamiento in equipamientos %}
+								<li>{{equipamiento.descripcion}}</li>
+								{% endfor %}
 							</ul>
 						</div>
 						<div class="col-md-4 ftco-animate text-left">
 							<p>VENTA DE ACCESORIOS</p>
 							<ul class="requerimientos">
-								<li>Paneles solares</li>
-								<li>Regulador de voltaje solar</li>
-								<li>Cargador de baterías</li>
-								<li>Inodoros químicos</li>
-								<li>Grifería y bachas para casas rodantes y motorhome</li>
-								<li>Claraboyas con ventilador y extractor</li>
-								<li>Anafes a gas</li>
-								<li>Fabricación y colocación de portaequipajes</li>
+								{% for accesorio in accesorios %}
+								<li>{{accesorio.descripcion}}</li>
+								{% endfor %}
 							</ul>
 						</div>
 					</div>
@@ -140,78 +121,20 @@
 			<div class="row">
 				<div class="col-md-12 testimonial">
 					<div class="carousel-project owl-carousel">
+						{% for producto in productos %}
 						<div class="item">
 							<div class="project">
-								<div class="img">
-									<img src="{% static 'core/images/previews/productos/inodoro-1-pv.jpg' %}"
-										class="img-fluid">
-									<a href="{% static 'core/images/inodoro.jpg' %}"
+								<div class="galeria-productos">
+									<img src="{{producto.imagen.url}}"
+										class="galeria-productos">
+									<a href="{{producto.imagen.url}}"
 										class="icon image-popup d-flex justify-content-center align-items-center">
 										<span class="icon-expand"></span>
 									</a>
 								</div>
 							</div>
 						</div>
-						<div class="item">
-							<div class="project">
-								<div class="img">
-									<img src="{% static 'core/images/previews/productos/anafe-1-pv.jpg' %}"
-										class="img-fluid">
-									<a href="{% static 'core/images/Anafe-2-.jpg' %}"
-										class="icon image-popup d-flex justify-content-center align-items-center">
-										<span class="icon-expand"></span>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="project">
-								<div class="img">
-									<img src="{% static 'core/images/previews/productos/panel-solar-1-pv.jpg' %}"
-										class="img-fluid">
-									<a href="{% static 'core/images/panel-solar-1.jpg' %}"
-										class="icon image-popup d-flex justify-content-center align-items-center">
-										<span class="icon-expand"></span>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="project">
-								<div class="img">
-									<img src="{% static 'core/images/previews/productos/panel-solar-2-pv.jpg' %}"
-										class="img-fluid">
-									<a href="{% static 'core/images/panel-solar-2.jpg' %}"
-										class="icon image-popup d-flex justify-content-center align-items-center">
-										<span class="icon-expand"></span>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="project">
-								<div class="img">
-									<img src="{% static 'core/images/previews/productos/griferia-1-pv.jpg' %}"
-										class="img-fluid">
-									<a href="{% static 'core/images/griferia-1.jpg' %}"
-										class="icon image-popup d-flex justify-content-center align-items-center">
-										<span class="icon-expand"></span>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="project">
-								<div class="img">
-									<img src="{% static 'core/images/previews/productos/clara-boya-1-pv.png' %}"
-										class="img-fluid">
-									<a href="{% static 'core/images/clara-boya-1.png' %}"
-										class="icon image-popup d-flex justify-content-center align-items-center">
-										<span class="icon-expand"></span>
-									</a>
-								</div>
-							</div>
-						</div>
+						{% endfor %}
 					</div>
 				</div>
 			</div>
@@ -221,6 +144,7 @@
 		</div>
 	</section>
 
+	{% for contacto in contactos %}
 	<section class="ftco-section contact-section" data-section="contact">
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-3">
@@ -236,7 +160,7 @@
 							<span class="icon-map-signs"></span>
 						</div>
 						<h3 class="mb-4">Dirección</h3>
-						<p class="text-dark">Richeri bis y ruta 280 <br> Sunchales - Santa Fe - Argentina</p>
+						<p class="text-dark">{{contacto.direccion}} <br> {{contacto.localidad}}</p>
 					</div>
 				</div>
 				<div class="col-md-12 col-lg-4 d-flex">
@@ -245,7 +169,7 @@
 							<span class="icon-phone2"></span>
 						</div>
 						<h3 class="mb-4">Teléfono</h3>
-						<p><a href="tel://+5493493445130">(03493) 15445130</a></p>
+						<p><a href="tel://+{{contacto.email}}">{{contacto.telefono}}</a></p>
 					</div>
 				</div>
 				<div class="col-md-12 col-lg-4 d-flex">
@@ -254,8 +178,8 @@
 							<span class="icon-paper-plane"></span>
 						</div>
 						<h3 class="mb-4">Email</h3>
-						<p><a
-								href="mailto:rcalamarisolucionesyservicio@hotmail.com">cm.camperyequipamiento2404<br>@gmail.com</a>
+						<p>
+							<a style="font-size: smaller;" href="mailto:{{contacto.email}}">{{contacto.email}}</a>
 						</p>
 					</div>
 				</div>
@@ -269,11 +193,13 @@
 		</div>
 	</section>
 
-	<a href="https://wa.me/5493493445130?text=Hola CM Camper %20%26%20 Equipamiento! Quiero ponerme en contacto con ustedes."
+	<a href="https://wa.me/{{contacto.numero_wspp}}?text=Hola CM Camper %20%26%20 Equipamiento! Quiero ponerme en contacto con ustedes."
 		class="whatsapp" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
 
-	<a href="https://www.facebook.com/cmcamperyequipamineto"
-		class="facebook" target="_blank"> <i class="fa fa-facebook facebook-icon"></i></a>
+	<a href="{{contacto.link_facebook}}" class="facebook" target="_blank"> <i
+			class="fa fa-facebook facebook-icon"></i></a>
+
+	{% endfor %}
 
 	<!-- loader -->
 	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
@@ -282,6 +208,7 @@
 				stroke="#2e9e5b" />
 		</svg></div>
 
+	
 
 	<script src="{% static 'core/js/jquery.min.js' %}"></script>
 	<script src="{% static 'core/js/jquery-migrate-3.0.1.min.js' %}"></script>

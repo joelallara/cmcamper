@@ -1,0 +1,303 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>CM Camper</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="{% static 'core/css/open-iconic-bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'core/css/animate.css' %}">
+
+	<link rel="stylesheet" href="{% static 'core/css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'core/css//owl.theme.default.min.css' %}">
+	<link rel="stylesheet" href="{% static 'core/css/magnific-popup.css' %}">
+
+	<link rel="stylesheet" href="{% static 'core/css/aos.css' %}">
+
+	<link rel="stylesheet" href="{% static 'core/css/ionicons.min.css' %}">
+
+	<link rel="stylesheet" href="{% static 'core/css/flaticon.css' %}">
+	<link rel="stylesheet" href="{% static 'core/css/icomoon.css' %}">
+	<link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+	<!-- <link rel="stylesheet" href="{% static 'core/css/estilos-propios.css' %}"> -->
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<script src="https://kit.fontawesome.com/75b0cfc404.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand pt-2 pb-2" href="{% url 'inicio' %}">
+				<!-- <span>CM Camper</span> -->
+				<img src="{% static 'core/images/logo.svg' %}" alt="logo" width="200" alt=""
+					class="d-inline-block align-middle mr-2 h-100">
+			</a>
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="#" class="nav-link" data-nav-section="home"><span>Inicio</span></a>
+					</li>
+					<!-- <li class="nav-item"><a href="#" class="nav-link" data-nav-section="about"><span>About</span></a></li> -->
+					<li class="nav-item"><a href="#" class="nav-link"
+							data-nav-section="projects"><span>Productos</span></a></li>
+					<!-- <li class="nav-item"><a href="#" class="nav-link" data-nav-section="team"><span>Team</span></a></li>
+	          <li class="nav-item"><a href="#" class="nav-link" data-nav-section="testimony"><span>Testimony</span></a></li>
+	          <li class="nav-item"><a href="#" class="nav-link" data-nav-section="blog"><span>Blog</span></a></li> -->
+					<li class="nav-item"><a href="#" class="nav-link"
+							data-nav-section="contact"><span>Contacto</span></a></li>
+					<!-- <li class="nav-item cta"><a href="#" class="nav-link">Request a quote</a></li> -->
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<section class="hero-wrap js-fullheight" style="background-image: url('/static/core/images/bg_1.jpg');"
+		data-section="home">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start"
+				data-scrollax-parent="true">
+				<div class="col-md-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+					<!-- <p class="d-flex align-items-center"
+						data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+						<a href="https://vimeo.com/45830194"
+							class="icon-video popup-vimeo d-flex justify-content-center align-items-center mr-3">
+							<span class="ion-ios-play play mr-2"></span>
+							<span class="watch">Watch Video</span>
+						</a>
+					</p> -->
+					<h2 class="text-white text-center titulo"
+						data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+						{% block titulo %}
+						{% endblock titulo %}
+					</h2>
+					<!-- <p class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Travel to the any
+						corner of the world, without going around in circles</p> -->
+				</div>
+			</div>
+		</div>
+	</section>
+	{% block fabricaciones %}
+	{% endblock fabricaciones %}
+
+	<section class="ftco-section ftco-project bg-light pt-3" data-section="projects">
+		<div class="container-fluid px-md-5">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-12 heading-section text-center ftco-animate">
+					<!-- <span class="subheading">Accomplishments</span> -->
+					<h2 class="mb-4">Nuestros Productos</h2>
+					<!-- <p>EQUIPAMIENTO SEGÚN REQUERIMIENTO</p> -->
+					<div class="row justify-content-center">
+						<div class="col-md-4 ftco-animate text-left">
+							<p>EQUIPAMIENTO SEGÚN REQUERIMIENTO</p>
+							<ul class="requerimientos">
+								<li>Anafe de 2 hornallas con corte de seguridad</li>
+								<li>Calefón de 7 lts electrónico</li>
+								<li>Heladera 220V de 90 Lts- Clase A++</li>
+								<li>Batería de ciclo profundo de 200AH</li>
+								<li>Inversor solar de 250W</li>
+								<li>Regulador solar</li>
+								<li>Panel solar de 160 watt Clase A</li>
+								<li>Sensor de perdida de gases</li>
+								<li>Claraboya con ventilador y extractor</li>
+								<li>Baño químico</li>
+								<li>Equipo de audio</li>
+								<li>Duchador de agua fría/cliente</li>
+							</ul>
+						</div>
+						<div class="col-md-4 ftco-animate text-left">
+							<p>VENTA DE ACCESORIOS</p>
+							<ul class="requerimientos">
+								<li>Paneles solares</li>
+								<li>Regulador de voltaje solar</li>
+								<li>Cargador de baterías</li>
+								<li>Inodoros químicos</li>
+								<li>Grifería y bachas para casas rodantes y motorhome</li>
+								<li>Claraboyas con ventilador y extractor</li>
+								<li>Anafes a gas</li>
+								<li>Fabricación y colocación de portaequipajes</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+			<div class="row">
+				<div class="col-md-12 testimonial">
+					<div class="carousel-project owl-carousel">
+						<div class="item">
+							<div class="project">
+								<div class="img">
+									<img src="{% static 'core/images/previews/productos/inodoro-1-pv.jpg' %}"
+										class="img-fluid">
+									<a href="{% static 'core/images/inodoro.jpg' %}"
+										class="icon image-popup d-flex justify-content-center align-items-center">
+										<span class="icon-expand"></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="project">
+								<div class="img">
+									<img src="{% static 'core/images/previews/productos/anafe-1-pv.jpg' %}"
+										class="img-fluid">
+									<a href="{% static 'core/images/Anafe-2-.jpg' %}"
+										class="icon image-popup d-flex justify-content-center align-items-center">
+										<span class="icon-expand"></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="project">
+								<div class="img">
+									<img src="{% static 'core/images/previews/productos/panel-solar-1-pv.jpg' %}"
+										class="img-fluid">
+									<a href="{% static 'core/images/panel-solar-1.jpg' %}"
+										class="icon image-popup d-flex justify-content-center align-items-center">
+										<span class="icon-expand"></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="project">
+								<div class="img">
+									<img src="{% static 'core/images/previews/productos/panel-solar-2-pv.jpg' %}"
+										class="img-fluid">
+									<a href="{% static 'core/images/panel-solar-2.jpg' %}"
+										class="icon image-popup d-flex justify-content-center align-items-center">
+										<span class="icon-expand"></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="project">
+								<div class="img">
+									<img src="{% static 'core/images/previews/productos/griferia-1-pv.jpg' %}"
+										class="img-fluid">
+									<a href="{% static 'core/images/griferia-1.jpg' %}"
+										class="icon image-popup d-flex justify-content-center align-items-center">
+										<span class="icon-expand"></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="project">
+								<div class="img">
+									<img src="{% static 'core/images/previews/productos/clara-boya-1-pv.png' %}"
+										class="img-fluid">
+									<a href="{% static 'core/images/clara-boya-1.png' %}"
+										class="icon image-popup d-flex justify-content-center align-items-center">
+										<span class="icon-expand"></span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+		</div>
+	</section>
+
+	<section class="ftco-section contact-section" data-section="contact">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<!-- <span class="subheading">Contacto</span> -->
+					<h2 class="mb-4">Contáctenos</h2>
+				</div>
+			</div>
+			<div class="row d-flex contact-info">
+				<div class="col-md-12 col-lg-4 d-flex">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-map-signs"></span>
+						</div>
+						<h3 class="mb-4">Dirección</h3>
+						<p class="text-dark">Richeri bis y ruta 280 <br> Sunchales - Santa Fe - Argentina</p>
+					</div>
+				</div>
+				<div class="col-md-12 col-lg-4 d-flex">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-phone2"></span>
+						</div>
+						<h3 class="mb-4">Teléfono</h3>
+						<p><a href="tel://+5493493445130">(03493) 15445130</a></p>
+					</div>
+				</div>
+				<div class="col-md-12 col-lg-4 d-flex">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-paper-plane"></span>
+						</div>
+						<h3 class="mb-4">Email</h3>
+						<p><a
+								href="mailto:rcalamarisolucionesyservicio@hotmail.com">cm.camperyequipamiento2404<br>@gmail.com</a>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-12 col-lg-12 d-flex mt-5 justify-content-center">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1711.1253550165245!2d-61.58966988466908!3d-30.935561722127638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDU2JzA2LjMiUyA2McKwMzUnMjEuMiJX!5e0!3m2!1ses!2sar!4v1616122432893!5m2!1ses!2sar"
+						width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<a href="https://wa.me/5493493445130?text=Hola CM Camper %20%26%20 Equipamiento! Quiero ponerme en contacto con ustedes."
+		class="whatsapp" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
+
+	<a href="https://www.facebook.com/cmcamperyequipamineto"
+		class="facebook" target="_blank"> <i class="fa fa-facebook facebook-icon"></i></a>
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#2e9e5b" />
+		</svg></div>
+
+
+	<script src="{% static 'core/js/jquery.min.js' %}"></script>
+	<script src="{% static 'core/js/jquery-migrate-3.0.1.min.js' %}"></script>
+	<script src="{% static 'core/js/popper.min.js' %}"></script>
+	<script src="{% static 'core/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'core/js/jquery.easing.1.3.js' %}"></script>
+	<script src="{% static 'core/js/jquery.waypoints.min.js' %}"></script>
+	<script src="{% static 'core/js/jquery.stellar.min.js' %}"></script>
+	<script src="{% static 'core/js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'core/js/jquery.magnific-popup.min.js' %}"></script>
+	<script src="{% static 'core/js/aos.js' %}"></script>
+	<script src="{% static 'core/js/jquery.animateNumber.min.js' %}"></script>
+	<script src="{% static 'core/js/scrollax.min.js' %}"></script>
+	<script src="{% static 'core/js/main.js' %}"></script>
+	{% block js %}
+	{% endblock js %}
+</body>
+
+</html>

@@ -145,6 +145,11 @@ STATICFILES_DIR = (
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 
+# Media config
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
 # LOGGING = {
 #     'version': 1,
 #     'disable_existing_loggers': False,

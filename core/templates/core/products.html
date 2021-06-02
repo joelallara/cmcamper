@@ -13,83 +13,19 @@ Fabricación de camper modelo POP UP
 				<div class="row">
 					<div class="col-md-12 testimonial">
 						<div class="carousel-pop owl-carousel">
+							{% for foto in fotos %}
 							<div class="item">
 								<div class="project">
 									<div class="pv-galeria">
-										<img src="{% static 'core/images/project-6.jpg' %}" class="pv-galeria">
-										<a href="{% static 'core/images/project-6.jpg' %}"
+										<img src="{{foto.imagen.url}}" class="pv-galeria">
+										<a href="{{foto.imagen.url}}"
 											class="icon image-popup d-flex justify-content-center align-items-center">
 											<span class="icon-expand"></span>
 										</a>
 									</div>
 								</div>
 							</div>
-							<div class="item">
-								<div class="project">
-									<div class="pv-galeria">
-										<img src="{% static 'core/images/project-3.jpg' %}" class="pv-galeria">
-										<a href="{% static 'core/images/project-3.jpg' %}"
-											class="icon image-popup d-flex justify-content-center align-items-center">
-											<span class="icon-expand"></span>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="project">
-									<div class="pv-galeria">
-										<img src="{% static 'core/images/fondo-pop-up.jpg' %}" class="pv-galeria">
-										<a href="{% static 'core/images/fondo-pop-up.jpg' %}"
-											class="icon image-popup d-flex justify-content-center align-items-center">
-											<span class="icon-expand"></span>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="project">
-									<div class="pv-galeria">
-										<img src="{% static 'core/images/project-16.jpg' %}" class="pv-galeria">
-										<a href="{% static 'core/images/project-16.jpg' %}"
-											class="icon image-popup d-flex justify-content-center align-items-center">
-											<span class="icon-expand"></span>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="project">
-									<div class="pv-galeria">
-										<img src="{% static 'core/images/pop-up-3.jpg' %}" class="pv-galeria">
-										<a href="{% static 'core/images/pop-up-3.jpg' %}"
-											class="icon image-popup d-flex justify-content-center align-items-center">
-											<span class="icon-expand"></span>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="project">
-									<div class="pv-galeria">
-										<img src="{% static 'core/images/pop-up-4.jpg' %}" class="pv-galeria">
-										<a href="{% static 'core/images/pop-up-4.jpg' %}"
-											class="icon image-popup d-flex justify-content-center align-items-center">
-											<span class="icon-expand"></span>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="project">
-									<div class="pv-galeria">
-										<img src="{% static 'core/images/project-17.jpg' %}" class="pv-galeria">
-										<a href="{% static 'core/images/project-17.jpg' %}"
-											class="icon image-popup d-flex justify-content-center align-items-center">
-											<span class="icon-expand"></span>
-										</a>
-									</div>
-								</div>
-							</div>
+							{% endfor %}
 						</div>
 					</div>
 				</div>
