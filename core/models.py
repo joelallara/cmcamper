@@ -32,6 +32,7 @@ class Contacto(models.Model):
     email = models.CharField(max_length=100)
     numero_wspp = models.PositiveBigIntegerField()
     link_facebook = models.URLField(max_length = 200)
+    link_instagram = models.URLField(max_length = 200, blank=True, null=True)
 
     class Meta:
         verbose_name = "Contacto"

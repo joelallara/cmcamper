@@ -4,7 +4,7 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-:root {
+ :root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -7805,6 +7805,20 @@ button.bg-dark:focus {
   position:fixed;
   width:60px;
   height:60px;
+  bottom:145px;
+  right:30px;
+  background-color:#4267B2;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  font-size:30px;
+  z-index:100;
+}
+
+.instagram {
+  position:fixed;
+  width:60px;
+  height:60px;
   bottom:80px;
   right:30px;
   background-color:#b40ca6;
@@ -7822,6 +7836,10 @@ button.bg-dark:focus {
     outline: none !important; } */
 
 .facebook-icon {
+  margin-top:13px;
+}
+
+.instagram-icon {
   margin-top:13px;
 }
 
