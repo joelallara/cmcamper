@@ -100,7 +100,7 @@ else:
             'NAME': "postgres",
             'USER':"postgres",
             'PASSWORD':"Subccomp85$",
-            'HOST':"db.ymnrdzqompfgwaakfgxk.supabase.co",
+            'HOST':"db.fgkwxjmgfbkrarmpnzrv.supabase.co",
             'PORT':"5432",
         }
     }
