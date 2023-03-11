@@ -94,14 +94,25 @@ if DEBUG:
         }
     }
 else:
-    import dj_database_url
-    from decouple import config
-
     DATABASES = {
-        'default': dj_database_url.config(
-            default=config('DATABASE_URL')
-        )
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': "postgres",
+            'USER':"postgres",
+            'PASSWORD':"Subccomp85$",
+            'HOST':"db.ymnrdzqompfgwaakfgxk.supabase.co",
+            'PORT':"5432",
+        }
     }
+    # import dj_database_url
+    # from decouple import config
+
+    # DATABASES = {
+    #     'default': dj_database_url.config(
+    #         default=config('DATABASE_URL')
+    #     )
+    # }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
