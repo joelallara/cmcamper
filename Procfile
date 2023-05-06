@@ -1,1 +1,1 @@
-web: gunicorn cmcamper.wsgi --log-file -
+web: gunicorn CMCAMPER.wsgi --log-file -
