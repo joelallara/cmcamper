@@ -25,6 +25,17 @@ class ListadoAccesorios(Listado):
         verbose_name_plural = "Accesorios"
 
 
+class SobreNosotros(models.Model):
+    descripcion = models.TextField()
+
+    class Meta:
+        verbose_name = "Sobre Nosotros"
+        verbose_name_plural = "Sobre Nosotros"
+
+    def __str__(self):
+        return self.descripcion
+    
+
 class Contacto(models.Model):
     direccion = models.CharField(max_length=100)
     localidad = models.CharField(max_length=100)
@@ -78,6 +89,6 @@ class GaleriaPopup(Galeria):
 
 class GaleriaOffRoad(Galeria):
     class Meta:
-        verbose_name = "Galeria OffRoad"
-        verbose_name_plural = "Galeria OffRoad"
+        verbose_name = "Galeria Camiones"
+        verbose_name_plural = "Galeria Camiones"
         ordering = ["orden"]

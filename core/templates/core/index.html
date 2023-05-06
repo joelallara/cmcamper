@@ -1,49 +1,41 @@
 {% extends 'core/base.html' %}
 {% load static%}
 
-{% block titulo %}
-Viajar añade toques distintos a tu vida y llena de aventuras tus sueños..!
-{% endblock titulo %}
 
 	{% block fabricaciones %}
 	<section class="ftco-section ftco-services ftco-no-pt bg-services">
 		<div class="container">
 			<div class="row services-section">
-				<div class="row services-section">
-					<div class="col-md-4 d-flex align-self-stretch ftco-animate">
-						<div class="block-6 services tarjeta text-center d-block ">
-							<a href="{% url 'motorhome' %}" target="_blank" class="block-20"
-								style="background-image: url('static/core/images/motorhome-1.jpg');">
-							</a>
-							<!-- <img width="60" height="81" src="{% static 'core/images/motorhome.svg' %}"> -->
-							<div class="media-body mt-3 float-right d-block">
-								<h3 class="heading">Fabricación y equipamiento de casa rodante</h3>
-								<p class="m-0"><a href="{% url 'motorhome' %}" target="_blank" class="btn btn-primary mt-2 mb-2">Más Info</a></p>
-							</div>
+				<div class="col-md-4 d-flex align-self-stretch ftco-animate">
+					<div class="block-6 services tarjeta text-center d-block ">
+						<a href="{% url 'offroad' %}" target="_blank" class="block-20"
+							style="background-image: url('static/core/images/fondo-off-road.jpg');">
+						</a>
+						<div class="media-body mt-3 float-right d-block">
+							<h3 class="heading">Fabricación de camiones camper</h3>
+							<p class="m-0"><a href="{% url 'offroad' %}" target="_blank" class="btn btn-primary mt-2 mb-2">Más Info</a></p>
 						</div>
 					</div>
-					<div class="col-md-4 d-flex align-self-stretch ftco-animate">
-						<div class="block-6 services tarjeta text-center d-block ">
-							<a href="{% url 'popup' %}" target="_blank" class="block-20"
-								style="background-image: url('static/core/images/popup-3.jpg');">
-							</a>
-							<!-- <img width="60" height="81" src="{% static 'core/images/motorhome.svg' %}"> -->
-							<div class="media-body mt-3 float-right d-block">
-								<h3 class="heading">Fabricación de camper modelo POP UP</h3>
-								<p class="m-0"><a href="{% url 'popup' %}" target="_blank" class="btn btn-primary mt-2 mb-2">Más Info</a></p>
-							</div>
+				</div>
+				<div class="col-md-4 d-flex align-self-stretch ftco-animate">
+					<div class="block-6 services tarjeta text-center d-block ">
+						<a href="{% url 'motorhome' %}" target="_blank" class="block-20"
+							style="background-image: url('static/core/images/motorhome-1.jpg');">
+						</a>
+						<div class="media-body mt-3 float-right d-block">
+							<h3 class="heading">Fabricación y equipamiento de casa rodante</h3>
+							<p class="m-0"><a href="{% url 'motorhome' %}" target="_blank" class="btn btn-primary mt-2 mb-2">Más Info</a></p>
 						</div>
 					</div>
-					<div class="col-md-4 d-flex align-self-stretch ftco-animate">
-						<div class="block-6 services tarjeta text-center d-block ">
-							<a href="{% url 'offroad' %}" target="_blank" class="block-20"
-								style="background-image: url('static/core/images/fondo-off-road.jpg');">
-							</a>
-							<!-- <img width="60" height="81" src="{% static 'core/images/motorhome.svg' %}"> -->
-							<div class="media-body mt-3 float-right d-block">
-								<h3 class="heading">Fabricación de casilla rodante modelo OFF ROAD</h3>
-								<p class="m-0"><a href="{% url 'offroad' %}" target="_blank" class="btn btn-primary mt-2 mb-2">Más Info</a></p>
-							</div>
+				</div>
+				<div class="col-md-4 d-flex align-self-stretch ftco-animate">
+					<div class="block-6 services tarjeta text-center d-block ">
+						<a href="{% url 'popup' %}" target="_blank" class="block-20"
+							style="background-image: url('static/core/images/popup-3.jpg');">
+						</a>
+						<div class="media-body mt-3 float-right d-block">
+							<h3 class="heading">Fabricación de camper modelo POP UP</h3>
+							<p class="m-0"><a href="{% url 'popup' %}" target="_blank" class="btn btn-primary mt-2 mb-2">Más Info</a></p>
 						</div>
 					</div>
 				</div>

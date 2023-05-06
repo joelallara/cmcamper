@@ -7,14 +7,14 @@ Fabricación y equipamiento de casa rodante
 
 {% block fabricaciones %}
 <section class="ftco-section ftco-services ftco-no-pt bg-services">
-	<div class="container">
+	<div class="container row-cards">
 		<div class="row pv-section">
 			<div class="container-fluid px-md-5">
 				<div class="row">
 					<div class="col-md-12 testimonial">
 						<div class="carousel-main owl-carousel">
 							{% for foto in fotos %}
-							<div class="item">
+							<div class="item services">
 								<div class="project">
 									<div class="pv-galeria">
 										<img src="{{foto.imagen.url}}" class="pv-galeria">

@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="{% static 'core/css/animate.css' %}">
 
 	<link rel="stylesheet" href="{% static 'core/css/owl.carousel.min.css' %}">
-	<link rel="stylesheet" href="{% static 'core/css/owl.theme.default.min.css' %}">
+	<link rel="stylesheet" href="{% static 'core/css//owl.theme.default.min.css' %}">
 	<link rel="stylesheet" href="{% static 'core/css/magnific-popup.css' %}">
 
 	<link rel="stylesheet" href="{% static 'core/css/aos.css' %}">
@@ -36,7 +36,7 @@
 		<div class="container">
 			<a class="navbar-brand pt-2 pb-2" href="{% url 'inicio' %}">
 				<!-- <span>CM Camper</span> -->
-				<img src="{% static 'core/images/logo.svg' %}" alt="logo" width="250" alt=""
+				<img src="{% static 'core/images/logo.svg' %}" alt="logo" width="200" alt=""
 					class="d-inline-block align-middle mr-2 h-100">
 			</a>
 			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
@@ -50,7 +50,7 @@
 						<span>Inicio</span></a>
 					</li>
 					<li class="nav-item"><a href="#" class="nav-link"
-							data-nav-section="projects"><span>Sobre Nosotros</span></a></li>
+							data-nav-section="projects"><span>Productos</span></a></li>
 					<li class="nav-item"><a href="#" class="nav-link"
 							data-nav-section="contact"><span>Contacto</span></a></li>
 				</ul>
@@ -58,7 +58,7 @@
 		</div>
 	</nav>
 
-	<section class="hero-wrap fondo" style="background-image: url('/static/core/images/bg_1.jpg');"
+	<section class="hero-wrap js-fullheight" style="background-image: url('/static/core/images/bg_1.jpg');"
 		data-section="home">
 		<div class="overlay"></div>
 		<div class="container">
@@ -73,11 +73,11 @@
 							<span class="watch">Watch Video</span>
 						</a>
 					</p> -->
-					<!-- <h2 class="text-white text-center titulo"
+					<h2 class="text-white text-center titulo"
 						data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
 						{% block titulo %}
 						{% endblock titulo %}
-					</h2> -->
+					</h2>
 					<!-- <p class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Travel to the any
 						corner of the world, without going around in circles</p> -->
 				</div>
@@ -87,22 +87,38 @@
 	{% block fabricaciones %}
 	{% endblock fabricaciones %}
 
-	<section class="ftco-section ftco-project bg-light pt-5" data-section="projects">
+	<section class="ftco-section ftco-project bg-light pt-3" data-section="projects">
 		<div class="container-fluid px-md-5">
 			<div class="row justify-content-center pb-5">
 				<div class="col-md-12 heading-section text-center ftco-animate">
 					<!-- <span class="subheading">Accomplishments</span> -->
-					<h2 class="mb-4">Sobre Nosotros</h2>
-					{% for descripcion in nosotros %}
-						<p class="text-justify about-us">{{descripcion}}</p>
-					{% endfor %}
+					<h2 class="mb-4">Nuestros Productos</h2>
+					<!-- <p>EQUIPAMIENTO SEGÚN REQUERIMIENTO</p> -->
+					<div class="row justify-content-center">
+						<div class="col-md-4 ftco-animate text-left">
+							<p>EQUIPAMIENTO SEGÚN REQUERIMIENTO</p>
+							<ul class="requerimientos">
+								{% for equipamiento in equipamientos %}
+								<li>{{equipamiento.descripcion}}</li>
+								{% endfor %}
+							</ul>
+						</div>
+						<div class="col-md-4 ftco-animate text-left">
+							<p>VENTA DE ACCESORIOS</p>
+							<ul class="requerimientos">
+								{% for accesorio in accesorios %}
+								<li>{{accesorio.descripcion}}</li>
+								{% endfor %}
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 
 
 
 
-			<!-- <div class="row">
+			<div class="row">
 				<div class="col-md-12 testimonial">
 					<div class="carousel-project owl-carousel">
 						{% for producto in productos %}
@@ -121,7 +137,7 @@
 						{% endfor %}
 					</div>
 				</div>
-			</div> -->
+			</div>
 
 
 
@@ -130,7 +146,7 @@
 
 	{% for contacto in contactos %}
 	<section class="ftco-section contact-section" data-section="contact">
-		<div class="container" style="padding-bottom: 4em;">
+		<div class="container">
 			<div class="row justify-content-center mb-5 pb-3">
 				<div class="col-md-7 heading-section text-center ftco-animate">
 					<!-- <span class="subheading">Contacto</span> -->
@@ -167,6 +183,12 @@
 						</p>
 					</div>
 				</div>
+				<!-- <div class="col-md-12 col-lg-12 d-flex mt-5 justify-content-center">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1711.1253550165245!2d-61.58966988466908!3d-30.935561722127638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDU2JzA2LjMiUyA2McKwMzUnMjEuMiJX!5e0!3m2!1ses!2sar!4v1616122432893!5m2!1ses!2sar"
+						width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				</div> -->
+
 			</div>
 		</div>
 	</section>

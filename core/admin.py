@@ -1,6 +1,9 @@
 from django.contrib import admin
-from .models import ListadoEquipamiento, ListadoAccesorios, Contacto, GaleriaProductos, GaleriaPopup, GaleriaMotorHome, GaleriaOffRoad
+from .models import ListadoEquipamiento, ListadoAccesorios, Contacto, GaleriaProductos, GaleriaPopup, GaleriaMotorHome, GaleriaOffRoad, SobreNosotros
 
+
+class SobreNosotrosAdmin(admin.ModelAdmin):
+    list_display = ('descripcion',)
 
 class ListadoEquipamientoAdmin(admin.ModelAdmin):
     list_display = ('descripcion',)
@@ -39,10 +42,11 @@ class GaleriaOffRoadAdmin(GaleriasAdmin):
         return form
 
 
-admin.site.register(ListadoEquipamiento,ListadoEquipamientoAdmin)
-admin.site.register(ListadoAccesorios,ListadoAccesoriosAdmin)
+admin.site.register(SobreNosotros,SobreNosotrosAdmin)
+# admin.site.register(ListadoEquipamiento,ListadoEquipamientoAdmin)
+# admin.site.register(ListadoAccesorios,ListadoAccesoriosAdmin)
 admin.site.register(Contacto,ContactoAdmin)
-admin.site.register(GaleriaProductos,GaleriaProductosAdmin)
+# admin.site.register(GaleriaProductos,GaleriaProductosAdmin)
 admin.site.register(GaleriaPopup,GaleriaPopupAdmin)
 admin.site.register(GaleriaMotorHome,GaleriaMotorHomeAdmin)
 admin.site.register(GaleriaOffRoad,GaleriaOffRoadAdmin)
