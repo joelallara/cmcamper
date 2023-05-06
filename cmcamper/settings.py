@@ -103,7 +103,7 @@ else:
     #         'HOST':"db.fgkwxjmgfbkrarmpnzrv.supabase.co",
     #         'PORT':"5432",
     #     }
-    }
+    # }
     import dj_database_url
     from decouple import config
 
