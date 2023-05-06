@@ -94,24 +94,24 @@ if DEBUG:
         }
     }
 else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': "postgres",
-            'USER':"postgres",
-            'PASSWORD':"Subccomp85$",
-            'HOST':"db.fgkwxjmgfbkrarmpnzrv.supabase.co",
-            'PORT':"5432",
-        }
-    }
-    # import dj_database_url
-    # from decouple import config
-
     # DATABASES = {
-    #     'default': dj_database_url.config(
-    #         default=config('DATABASE_URL')
-    #     )
-    # }
+    #     'default': {
+    #         'ENGINE': 'django.db.backends.postgresql',
+    #         'NAME': "postgres",
+    #         'USER':"postgres",
+    #         'PASSWORD':"Subccomp85$",
+    #         'HOST':"db.fgkwxjmgfbkrarmpnzrv.supabase.co",
+    #         'PORT':"5432",
+    #     }
+    }
+    import dj_database_url
+    from decouple import config
+
+    DATABASES = {
+        'default': dj_database_url.config(
+            default=config('DATABASE_URL')
+        )
+    }
 
 
 # Password validation
