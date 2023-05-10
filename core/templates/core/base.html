@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-	<title>CM Camper</title>
+	<title>CG Campers</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -36,7 +36,7 @@
 		<div class="container">
 			<a class="navbar-brand pt-2 pb-2" href="{% url 'inicio' %}">
 				<!-- <span>CM Camper</span> -->
-				<img src="{% static 'core/images/logo.svg' %}" alt="logo" width="250" alt=""
+				<img id="logo" src="{% static 'core/images/logo-negro.svg' %}" alt="logo" width="250" alt=""
 					class="d-inline-block align-middle mr-2 h-100">
 			</a>
 			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
@@ -143,8 +143,18 @@
 						<div class="icon d-flex align-items-center justify-content-center">
 							<span class="icon-map-signs"></span>
 						</div>
-						<h3 class="mb-4">Dirección</h3>
-						<p class="text-dark">{{contacto.direccion}} <br> {{contacto.localidad}}</p>
+						{% if contacto.direccion %}
+							<h3 class="mb-4">Dirección</h3>
+							<p class="text-dark">{{contacto.direccion}}
+							{% if contacto.localidad %}
+								<br>{{contacto.localidad}}</p>
+							{% else %}
+								</p>
+							{% endif %}
+						{% elif contacto.localidad %}
+							<h3 class="mb-4">Localidad</h3>
+							<p>{{contacto.localidad}}</p>
+						{% endif %}
 					</div>
 				</div>
 				<div class="col-md-12 col-lg-4 d-flex">
@@ -171,15 +181,24 @@
 		</div>
 	</section>
 
-	<a href="https://wa.me/{{contacto.numero_wspp}}?text=Hola CM Camper %20%26%20 Equipamiento! Quiero ponerme en contacto con ustedes."
+	<div class="social-links">
+	{% if contacto.numero_wspp %}
+	<a href="https://wa.me/{{contacto.numero_wspp}}?text={{contacto.mensaje_wspp}}"
 		class="whatsapp" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
+	{% endif %}
 
+	{% if contacto.link_facebook %}
 	<a href="{{contacto.link_facebook}}" class="facebook" target="_blank"> <i
 			class="fa fa-facebook facebook-icon"></i></a>
+	{% endif %}
 
+	{% if contacto.link_instagram %}
 	<a href="{{contacto.link_instagram}}" class="instagram" target="_blank"> <i
 			class="fa fa-instagram instagram-icon"></i></a>
+	{% endif %}
 
+	</div>
+	
 	{% endfor %}
 
 	<!-- loader -->

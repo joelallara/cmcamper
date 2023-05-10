@@ -37,21 +37,22 @@ class SobreNosotros(models.Model):
     
 
 class Contacto(models.Model):
-    direccion = models.CharField(max_length=100)
+    direccion = models.CharField(max_length=100, blank=True, null=True, default=None)
     localidad = models.CharField(max_length=100)
     telefono = models.CharField(max_length=100)
     email = models.CharField(max_length=100)
-    numero_wspp = models.PositiveBigIntegerField()
-    link_facebook = models.URLField(max_length = 200)
-    link_instagram = models.URLField(max_length = 200, blank=True, null=True)
+    numero_wspp = models.PositiveBigIntegerField(blank=True, null=True, default=None)
+    mensaje_wspp = models.TextField(blank=True, null=True,default=None)
+    link_facebook = models.URLField(max_length = 200, blank=True, null=True, default=None)
+    link_instagram = models.URLField(max_length = 200, blank=True, null=True, default=None)
 
     class Meta:
         verbose_name = "Contacto"
         verbose_name_plural = "Contacto"
-        ordering = ["-direccion"]
+        ordering = ["-localidad"]
 
     def __str__(self):
-        return self.direccion
+        return self.localidad
 
 
 class Galeria(models.Model):

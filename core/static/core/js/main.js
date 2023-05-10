@@ -5,8 +5,6 @@ AOS.init({
 
 
 
-
-
 (function ($) {
 
 	"use strict";
@@ -276,6 +274,7 @@ AOS.init({
 		$(window).scroll(function () {
 			var $w = $(this),
 				st = $w.scrollTop(),
+				imgSelector = $('#logo'),
 				navbar = $('.ftco_navbar'),
 				sd = $('.js-scroll-wrap');
 
@@ -292,19 +291,25 @@ AOS.init({
 			if (st > 350) {
 				if (!navbar.hasClass('awake')) {
 					navbar.addClass('awake');
+					
+					console.log(imgSelector)
+					imgSelector.attr('src', "/static/core/images/logo-blanco.svg");
 				}
 
 				if (sd.length > 0) {
 					sd.addClass('sleep');
+					imgSelector.attr('src', "/static/core/images/logo-negro.svg");
 				}
 			}
 			if (st < 350) {
 				if (navbar.hasClass('awake')) {
 					navbar.removeClass('awake');
 					navbar.addClass('sleep');
+					imgSelector.attr('src', "/static/core/images/logo-negro.svg");
 				}
 				if (sd.length > 0) {
 					sd.removeClass('sleep');
+					imgSelector.attr('src', "/static/core/images/logo-negro.svg");
 				}
 			}
 		});

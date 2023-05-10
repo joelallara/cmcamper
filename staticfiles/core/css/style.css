@@ -8049,7 +8049,7 @@ body {
   font-size: 16px;
   line-height: 1.8;
   font-weight: 400;
-  color: #999999; }
+  color: #000000; }
   body.menu-show {
     overflow: hidden;
     position: fixed;
@@ -9340,6 +9340,7 @@ textarea.form-control {
 .row-cards{
   margin-top: -200px !important;
 }
+
 
 .contact-section .box {
   width: 100%;
