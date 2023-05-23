@@ -1,6 +1,9 @@
 from django.contrib import admin
-from .models import ListadoEquipamiento, ListadoAccesorios, Contacto, GaleriaProductos, GaleriaPopup, GaleriaMotorHome, GaleriaOffRoad, SobreNosotros
+from .models import Portada, ListadoEquipamiento, ListadoAccesorios, Contacto, GaleriaProductos, GaleriaPopup, GaleriaMotorHome, GaleriaOffRoad, SobreNosotros
 
+
+class PortadaAdmin(admin.ModelAdmin):
+    list_display = ('titulo','imagen','orden',)
 
 class SobreNosotrosAdmin(admin.ModelAdmin):
     list_display = ('descripcion',)
@@ -41,7 +44,7 @@ class GaleriaOffRoadAdmin(GaleriasAdmin):
         form.base_fields['orden'].initial = (GaleriaOffRoad.objects.count()+1)
         return form
 
-
+admin.site.register(Portada,PortadaAdmin)
 admin.site.register(SobreNosotros,SobreNosotrosAdmin)
 # admin.site.register(ListadoEquipamiento,ListadoEquipamientoAdmin)
 # admin.site.register(ListadoAccesorios,ListadoAccesoriosAdmin)

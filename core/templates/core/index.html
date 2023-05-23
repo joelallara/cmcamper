@@ -6,39 +6,19 @@
 	<section class="ftco-section ftco-services ftco-no-pt bg-services">
 		<div class="container">
 			<div class="row services-section">
+				{% for portada in portadas %}
 				<div class="col-md-4 d-flex align-self-stretch ftco-animate">
 					<div class="block-6 services tarjeta text-center d-block ">
 						<a href="{% url 'offroad' %}" target="_blank" class="block-20"
-							style="background-image: url('static/core/images/camiones_1.png');">
+							style="background-image: url('{{portada.imagen.url}}');">
 						</a>
 						<div class="media-body mt-3 float-right d-block">
-							<h3 class="heading">Fabricación de camiones camper</h3>
+							<h3 class="heading">{{portada.titulo}}</h3>
 							<p class="m-0"><a href="{% url 'offroad' %}" target="_blank" class="btn btn-primary mt-2 mb-2">Más Info</a></p>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 d-flex align-self-stretch ftco-animate">
-					<div class="block-6 services tarjeta text-center d-block ">
-						<a href="{% url 'motorhome' %}" target="_blank" class="block-20"
-							style="background-image: url('static/core/images/motorhome-1.jpg');">
-						</a>
-						<div class="media-body mt-3 float-right d-block">
-							<h3 class="heading">Fabricación y equipamiento de casa rodante</h3>
-							<p class="m-0"><a href="{% url 'motorhome' %}" target="_blank" class="btn btn-primary mt-2 mb-2">Más Info</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 d-flex align-self-stretch ftco-animate">
-					<div class="block-6 services tarjeta text-center d-block ">
-						<a href="{% url 'popup' %}" target="_blank" class="block-20"
-							style="background-image: url('static/core/images/popup-3.jpg');">
-						</a>
-						<div class="media-body mt-3 float-right d-block">
-							<h3 class="heading">Fabricación de camper modelo POP UP</h3>
-							<p class="m-0"><a href="{% url 'popup' %}" target="_blank" class="btn btn-primary mt-2 mb-2">Más Info</a></p>
-						</div>
-					</div>
-				</div>
+				{% endfor %}
 			</div>
 	</section>
 	{% endblock fabricaciones %}

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
-from core.models import ListadoEquipamiento, ListadoAccesorios, Contacto, GaleriaProductos, GaleriaPopup, GaleriaMotorHome, GaleriaOffRoad, SobreNosotros
+from core.models import Portada, ListadoEquipamiento, ListadoAccesorios, Contacto, GaleriaProductos, GaleriaPopup, GaleriaMotorHome, GaleriaOffRoad, SobreNosotros
 
 
 class HomePageView(TemplateView):
@@ -13,6 +13,7 @@ class HomePageView(TemplateView):
         context['contactos'] = Contacto.objects.all()
         context['productos'] = GaleriaProductos.objects.all()
         context['nosotros'] = SobreNosotros.objects.all()
+        context['portadas'] = Portada.objects.all()
         return context
 
 class PopUpPageView(HomePageView):

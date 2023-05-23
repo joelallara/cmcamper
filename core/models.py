@@ -1,5 +1,19 @@
 from django.db import models
 
+
+class Portada(models.Model):
+    titulo = models.CharField(max_length=100)
+    imagen = models.ImageField(verbose_name="Imagen", upload_to="core")
+    orden = models.PositiveIntegerField(unique=True, default=0)
+
+    class Meta:
+        verbose_name = "Portada"
+        verbose_name_plural = "Portada"
+        ordering = ["orden"]
+
+    def __str__(self):
+        return self.titulo
+
 class Listado(models.Model):
     descripcion = models.CharField(max_length=100)
 
