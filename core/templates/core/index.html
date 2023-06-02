@@ -8,11 +8,11 @@
 			<div class="row services-section">
 				{% for portada in portadas %}
 				<div class="col-md-4 d-flex align-self-stretch ftco-animate">
-					<div class="block-6 services tarjeta text-center d-block ">
+					<div class="block-6 services tarjeta text-center d-block" style="width: inherit;">
 						<a href="{% url 'offroad' %}" target="_blank" class="block-20"
 							style="background-image: url('{{portada.imagen.url}}');">
 						</a>
-						<div class="media-body mt-3 float-right d-block">
+						<div class="media-body mt-3 float-right d-block" style="width: inherit;">
 							<h3 class="heading">{{portada.titulo}}</h3>
 							<p class="m-0"><a href="{% url 'offroad' %}" target="_blank" class="btn btn-primary mt-2 mb-2">Más Info</a></p>
 						</div>
