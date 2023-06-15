@@ -2,24 +2,29 @@
 {% load static%}
 
 
-	{% block fabricaciones %}
-	<section class="ftco-section ftco-services ftco-no-pt bg-services">
-		<div class="container">
-			<div class="row services-section">
-				{% for portada in portadas %}
-				<div class="col-md-4 d-flex align-self-stretch ftco-animate">
-					<div class="block-6 services tarjeta text-center d-block" style="width: inherit;">
-						<a href="{% url 'offroad' %}" target="_blank" class="block-20"
-							style="background-image: url('{{portada.imagen.url}}');">
-						</a>
-						<div class="media-body mt-3 float-right d-block" style="width: inherit;">
-							<h3 class="heading">{{portada.titulo}}</h3>
-							<p class="m-0"><a href="{% url 'offroad' %}" target="_blank" class="btn btn-primary mt-2 mb-2">Más Info</a></p>
-						</div>
+{% block fabricaciones %}
+<section class="ftco-section ftco-services ftco-no-pt bg-services">
+	<div class="container">
+		<div class="row services-section">
+			{% for portada in portadas %}
+			<div class="col-md-4 d-flex align-self-stretch ftco-animate">
+				<div class="block-6 services tarjeta text-center d-block" style="width: inherit;">
+					{% with url_name_variable=portada.url_name %}
+					<a href="{% url url_name_variable %}" target="_blank" class="block-20"
+						style="background-image: url('{{ portada.imagen.url }}');">
+					</a>
+					{% endwith %}
+					<div class="media-body mt-3 float-right d-block" style="width: inherit;">
+						<h3 class="heading">{{portada.titulo}}</h3>
+						{% with url_name_variable=portada.url_name %}
+						<p class="m-0"><a href="{% url url_name_variable %}" target="_blank"
+								class="btn btn-primary mt-2 mb-2">Más Info</a></p>
+						{% endwith %}
+
 					</div>
 				</div>
-				{% endfor %}
 			</div>
-	</section>
-	{% endblock fabricaciones %}
-
+			{% endfor %}
+		</div>
+</section>
+{% endblock fabricaciones %}

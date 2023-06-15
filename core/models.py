@@ -5,6 +5,8 @@ class Portada(models.Model):
     titulo = models.CharField(max_length=100)
     imagen = models.ImageField(verbose_name="Imagen", upload_to="core")
     orden = models.PositiveIntegerField(unique=True, default=0)
+    url_name = models.CharField(max_length=100, default=None, blank=True, null=True)
+
 
     class Meta:
         verbose_name = "Portada"
